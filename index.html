@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie de Tableaux</title>
+  <style>
+    body {
+      background: url('votre_image.jpg') center center fixed; /* Remplacez 'votre_image.jpg' par le chemin de votre image de fond */
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Désactiver le défilement horizontal */
+      overflow-y: auto; /* Activer le défilement vertical si nécessaire */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* 100% de la hauteur de la vue (viewport) */
+    }
+
+    .galerie {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+      padding: 20px; /* Ajoute un espace autour de la galerie */
+      overflow: auto; /* Activer le défilement dans les deux directions */
+      max-width: 100%; /* Assurez-vous que la galerie n'est pas plus large que l'écran */
+    }
+
+    .image-container {
+      text-align: center;
+    }
+    .image {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain; /* Ajuste le redimensionnement de l'image */
+      max-height: 300px; /* Limite la hauteur maximale de l'image */
+      transition: transform 0.3s ease-in-out;
+    }
+
+
+
+    /* Ajuster la largeur maximale si l'image est plus large que haute */
+    @media (min-aspect-ratio: 1/1) {
+      .image-container {
+        max-width: 600px; /* Largeur maximale du conteneur si l'image est plus large que haute */
+      }
+    }
+  </style>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>Galerie de Francis Fernsner</h1>
+</body>
+</html>
+
