@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Dossier contenant les photos
-    const dossierPhotos = "./img";
+    const dossierPhotos = "./static/images";
   
     // Récupérer l'élément du corps du document
     const body = document.body;
