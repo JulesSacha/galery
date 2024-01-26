@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
           // Vérifier si dimensionWithExtension est défini et n'est pas 'undefined'
           if (dimensionWithExtension && dimensionWithExtension !== 'undefined') {
             const dimension = dimensionWithExtension.replace(/\.[^/.]+$/, ""); // Retirer l'extension
-            const imgElement = `<img class='image' src='/${fichierPhoto}' alt='Tableau ${index}'>`;
+            const imgElement = `<img class='image' src='${fichierPhoto}' alt='Tableau ${index}'>`;
             const divElement = `<div class='image-container'><h2>${dimension}</h2>${imgElement}</div>`;
             galerieHTML.innerHTML += divElement;
           }
